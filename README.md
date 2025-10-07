@@ -4,8 +4,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Notes
 
-1. All components are placed in `components` folder along with test files
+1. All components are placed in `Components` folder along with test files
 2. Create `.env` file in the root directory and add `REACT_APP_API_KEY=<API_KEY>`. Please replace <API_KEY> with the actual API key provided to me.
+
+## Approach
+
+I built the App component with a focus on clear state management, type safety, and reusable UI components. The app initializes a GraphQL client once using useMemo and fetches customer data through a useEffect that calls the ListZellerCustomers query. The response is type-checked, filtered by role using useMemo for performance, and handled with proper loading and error states.
+
+For the UI, I created two reusable components:
+
+RadioButton – a controlled input component that updates the selected user role (admin or manager) through handleClick, providing a clean and accessible toggle for filtering users.
+
+Card – a presentational component that displays each customer’s name and role in a consistent, styled format.
+
+Together, these components keep the App component lean, maintainable, and easy to test, emphasizing separation of concerns and performance through memoization.
 
 ## Available Scripts
 
