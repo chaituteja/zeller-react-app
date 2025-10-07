@@ -6,6 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. All components are placed in `Components` folder along with test files
 2. Create `.env` file in the root directory and add `REACT_APP_API_KEY=<API_KEY>`. Please replace <API_KEY> with the actual API key provided to me.
+3. By default "Admin" radio button is checked
 
 ## Approach
 
