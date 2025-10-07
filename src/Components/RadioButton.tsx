@@ -47,7 +47,13 @@ const RadioBox = styled.div`
 `;
 
 const Input = styled.input`
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  &:focus + ${RadioBox} {
+    outline: 2px solid #2266dc;
+    outline-offset: 2px;
+  }
   &:checked + ${RadioBox} {
   border-color: #2266dc;
       &::after {
